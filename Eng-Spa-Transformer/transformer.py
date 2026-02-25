@@ -38,6 +38,7 @@ def build_vocab(sentences):
                 idx += 1
     return vocab
 
+
 if os.path.exists("eng_vocab.pkl"):
     with open("eng_vocab.pkl","rb") as f:
         eng_vocab = pickle.load(f)
@@ -70,6 +71,7 @@ train_data = [(encode_sentence(e,eng_vocab),
 def pad_sequences(batch, pad_idx=0):
     max_len = max(len(x) for x in batch)
     return [x + [pad_idx]*(max_len - len(x)) for x in batch]
+
 
 # ================= TRANSFORMER ================= #
 
