@@ -16,6 +16,7 @@ def load_parallel_data(en_path, ta_path, max_len=20):
         en_lines = f1.read().splitlines()
         ta_lines = f2.read().splitlines()
 
+    
     data = []
     for en, ta in zip(en_lines, ta_lines):
         if len(en.split()) <= max_len and len(ta.split()) <= max_len:
