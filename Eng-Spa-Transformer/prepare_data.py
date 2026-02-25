@@ -28,4 +28,3 @@ def prepare_dataset(file_path, max_lines=20000):
 
 if __name__ == "__main__":
     prepare_dataset("spa.txt", max_lines=20000)
-
